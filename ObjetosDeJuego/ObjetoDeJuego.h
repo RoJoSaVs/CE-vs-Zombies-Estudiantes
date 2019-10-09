@@ -15,7 +15,7 @@ protected:
 public:
 
     virtual void thick() = 0;
-    virtual void render(Graphics graphics) = 0;
+    //virtual void render(Graphics graphics) = 0;
 
     int getX() const;
 
