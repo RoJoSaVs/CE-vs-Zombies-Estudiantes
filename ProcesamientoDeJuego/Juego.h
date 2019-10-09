@@ -3,8 +3,6 @@
 
 
 class Juego {
-public:
-    void run();
 
 
 };
