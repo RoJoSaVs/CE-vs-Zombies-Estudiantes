@@ -12,5 +12,5 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt5 COMPONENTS Core Gui Widgets Multimedia REQUIRED)
 
 add_executable(CE-vs-Zombies-Estudiantes main.cpp ObjetosDeJuego/ObjetoDeJuego.cpp ObjetosDeJuego/ObjetoDeJuego.h ObjetosDeJuego/ID.h ObjetosDeJuego/ID.cpp
-        GUI/Window.cpp GUI/Window.h)
+        GUI/Window.cpp GUI/Window.h GUI/gameWindow.cpp GUI/gameWindow.h)
 target_link_libraries(CE-vs-Zombies-Estudiantes Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Multimedia)

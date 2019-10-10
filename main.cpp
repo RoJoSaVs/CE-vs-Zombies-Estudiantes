@@ -1,7 +1,5 @@
-#include "main.h"
 #include <QtGui>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QWidget>
 #include "GUI/Window.h"
 
 
