@@ -3,15 +3,26 @@
 #include <QtGui>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QWidget>
+#include <QMainWindow>
 #include <QPushButton>
 
 using namespace std;
 
-class Window {
-    int width, length;
+namespace Ui{
+    class Window;
+}
+
+class Window : public QMainWindow {
+    Q_OBJECT
+
+private:
+    QPushButton *startButton;
+
+private slots:
+    void handleButton();
 
 public:
-Window(int argc, char *argv[], int width, int length, string title, QString imageURL);
+    explicit Window(QWidget *parent = 0);
 };
 
 

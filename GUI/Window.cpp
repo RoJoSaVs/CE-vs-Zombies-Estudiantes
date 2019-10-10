@@ -4,24 +4,16 @@
 
 #include "Window.h"
 
-Window::Window(int argc, char *argv[], int width, int length, string title, QString imageURL) {
-    this->width = width;
-    this->length = length;
+Window::Window(QWidget *parent) : QMainWindow(parent) {
 
-    QApplication app(argc, argv);
-    QWidget window;
-    window.setFixedSize(width, length);
-    window.show();
-    window.setWindowTitle(
-            QApplication::translate("toplevel", "Top-level widget"));
-    window.setStyleSheet("background-image: url(" + imageURL + ")");
+    startButton = new QPushButton("", this);
+    connect(startButton, SIGNAL (released()), this, SLOT (handleButton()));
+    startButton->setGeometry(430, 545, 443,81);
+    startButton->setFlat(true);
+    startButton->setStyleSheet("background-image: url(/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowButton.png)");
 
-    QPushButton startButton = new QPushButton
+}
 
-    QPixmap pixmap("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowButton.png ");
-    QIcon ButtonIcon(pixmap);
-    startButton.setIcon(ButtonIcon);
-    startButton.setGeometry(400, 640, 600,110);
+void Window::handleButton(){
 
-    app.exec();
 }

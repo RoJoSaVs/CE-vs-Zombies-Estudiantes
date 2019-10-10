@@ -7,5 +7,10 @@
 
 int main(int argc, char *argv[]){
 
-    Window *mainWindow = new Window(argc, argv, 1100, 800, "TEC vs ZOMBIES", "/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowBackground.png");
+    QApplication app(argc, argv);
+    Window mainWindow;
+    mainWindow.setFixedSize(897, 650);
+    mainWindow.setStyleSheet("background-image: url(/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowBackground.png)");
+    mainWindow.show();
+    return app.exec();
 }
