@@ -5,6 +5,7 @@
 #include <QtWidgets/QWidget>
 #include <QMainWindow>
 #include <QPushButton>
+#include "gameWindow.h"
 
 using namespace std;
 

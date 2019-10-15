@@ -12,5 +12,10 @@ Window::Window(QWidget *parent) : QMainWindow(parent) {
 }
 
 void Window::handleButton(){
-    this->close();
+    gameWindow gameWindow;
+    gameWindow.setModal(true);
+    gameWindow.setFixedSize(897, 650);
+    gameWindow.setStyleSheet("background-image: url(/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/gameWindowBackground.png)");
+    this->hide();
+    gameWindow.exec();
 }
