@@ -1,0 +1,13 @@
+#ifndef CE_VS_ZOMBIES_ESTUDIANTES_HANDLER_H
+#define CE_VS_ZOMBIES_ESTUDIANTES_HANDLER_H
+
+class Handler {
+private:
+
+
+public:
+
+};
+
+
+#endif //CE_VS_ZOMBIES_ESTUDIANTES_HANDLER_H
