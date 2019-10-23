@@ -4,6 +4,7 @@
 
 int main(int argc, char *argv[]){
 
+
     QApplication app(argc, argv);
     Window mainWindow;
     mainWindow.setFixedSize(897, 650);
