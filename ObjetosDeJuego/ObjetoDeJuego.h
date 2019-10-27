@@ -2,20 +2,30 @@
 #define CE_VS_ZOMBIES_ESTUDIANTES_OBJETODEJUEGO_H
 
 
+#include <SDL_system.h>
+#include "../ObjetosDeJuego/ID.h"
+
 class ObjetoDeJuego {
 
 protected:
-    ObjetoDeJuego(int x, int y, ID id);
-
     int x, y;
     ID id;
     int velX, velY;
     int salud;
 
-public:
+    SDL_Texture* texture;
+    SDL_Rect srcRect, destRect;
 
-    virtual void thick() = 0;
-    //virtual void render(Graphics graphics) = 0;
+
+public:
+    ObjetoDeJuego(const char* texturesheet, int x, int y, ID id);
+    ~ObjetoDeJuego();
+
+//    virtual void thick() = 0;
+//    //virtual void render(Graphics graphics) = 0;
+
+    void actualizar();
+    void Render();
 
     int getX() const;
 

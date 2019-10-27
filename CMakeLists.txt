@@ -9,7 +9,10 @@ set(CMAKE_AUTOUIC ON)
 
 add_executable(CE-vs-Zombies-Estudiantes main.cpp ObjetosDeJuego/ObjetoDeJuego.cpp ObjetosDeJuego/ObjetoDeJuego.h ObjetosDeJuego/ID.h ObjetosDeJuego/ID.cpp
         GUI/Window.cpp GUI/Window.h GUI/gameWindow.cpp GUI/gameWindow.h ProcesamientoDeJuego/Juego.cpp ProcesamientoDeJuego/Juego.h
-        ProcesamientoDeJuego/TextureManager.cpp ProcesamientoDeJuego/TextureManager.h)
+        ProcesamientoDeJuego/TextureManager.cpp ProcesamientoDeJuego/TextureManager.h
+        ProcesamientoDeJuego/Board.cpp ProcesamientoDeJuego/Board.h
+        ObjetosDeJuego/EntityComponentSystem.cpp ObjetosDeJuego/EntityComponentSystem.h
+        ObjetosDeJuego/Components.h)
 
 INCLUDE(FindPkgConfig)
 

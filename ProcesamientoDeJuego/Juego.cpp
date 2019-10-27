@@ -2,10 +2,17 @@
 #include "Juego.h"
 #include "SDL_image.h"
 #include "TextureManager.h"
+#include "../ObjetosDeJuego/ObjetoDeJuego.h"
+#include "../ObjetosDeJuego/ID.h"
+#include "Board.h"
+
 
 SDL_Texture* playerTex;
 SDL_Rect srcRec;
 SDL_Rect destRect;
+ObjetoDeJuego* jugador;
+SDL_Renderer* Juego::renderer = nullptr;
+Board* map;
 
 
 Juego::Juego() {
@@ -36,8 +43,8 @@ void Juego::init(const char *title, int x, int y, int width, int height, bool fu
     } else {
         running = false;
     }
-    playerTex = TextureManager::LoadTexture("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/gameWindowWavesButton.png", renderer);
-
+    jugador = new ObjetoDeJuego("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/gameWindowWavesButton.png", 60, 60, ID::Arquero);
+    map = new Board();
 }
 
 void Juego::handleEventos() {
@@ -53,16 +60,14 @@ void Juego::handleEventos() {
 }
 
 void Juego::actualizar() {
-    destRect.h = 80;
-    destRect.w = 80;
-    destRect.x++;
+    jugador->actualizar();
 }
 
 void Juego::render() {
     SDL_RenderClear(renderer);
     //Aqui agregamos cosas para renderizar
-    SDL_RenderCopy(renderer, playerTex, NULL, &destRect);
-
+    map->DrawBoard();
+    jugador->Render();
     SDL_RenderPresent(renderer);
 }
 
