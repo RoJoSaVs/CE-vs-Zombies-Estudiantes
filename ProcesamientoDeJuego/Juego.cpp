@@ -9,6 +9,8 @@
 #include "../ObjetosDeJuego/ECS/SpriteComponent.h"
 
 SDL_Renderer* Juego::renderer = nullptr;
+SDL_Event Juego::event;
+
 Board* map;
 Manager manager;
 auto& jugador(manager.addEntity());
@@ -48,11 +50,12 @@ void Juego::init(const char *title, int x, int y, int width, int height, bool fu
 
     jugador.addComponent<TransformComponent>();
     jugador.addComponent<SpriteComponent>("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowButton.png");
+    jugador.addComponent<KeyBoardController>();
 
 }
 
 void Juego::handleEventos() {
-    SDL_Event event;
+
     SDL_PollEvent(&event);
     switch (event.type){
         case SDL_QUIT:
@@ -66,12 +69,6 @@ void Juego::handleEventos() {
 void Juego::actualizar() {
     manager.refresh();
     manager.actualizar();
-    jugador.getComponent<TransformComponent>().position.Add(Vector(5,0));
-
-    if(jugador.getComponent<TransformComponent>().position.x > 100){
-        jugador.getComponent<SpriteComponent>().setTexture("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowBackground.png");
-    }
-
 }
 
 void Juego::render() {

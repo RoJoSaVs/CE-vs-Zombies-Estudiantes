@@ -7,6 +7,7 @@
 #include "EntityComponentSystem.h"
 #include "TransformComponent.h"
 #include "SpriteComponent.h"
+#include "KeyBoardController.h"
 
 
 #endif //CE_VS_ZOMBIES_ESTUDIANTES_COMPONENTS_H
