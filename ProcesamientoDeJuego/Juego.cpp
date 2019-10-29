@@ -2,17 +2,16 @@
 #include "Juego.h"
 #include "SDL_image.h"
 #include "TextureManager.h"
-#include "../ObjetosDeJuego/ObjetoDeJuego.h"
 #include "../ObjetosDeJuego/ID.h"
 #include "Board.h"
+#include "../ObjetosDeJuego/ECS/Components.h"
+#include "../ObjetosDeJuego/ObjetoDeJuego.h"
+#include "../ObjetosDeJuego/ECS/SpriteComponent.h"
 
-
-SDL_Texture* playerTex;
-SDL_Rect srcRec;
-SDL_Rect destRect;
-ObjetoDeJuego* jugador;
 SDL_Renderer* Juego::renderer = nullptr;
 Board* map;
+Manager manager;
+auto& jugador(manager.addEntity());
 
 
 Juego::Juego() {
@@ -43,8 +42,13 @@ void Juego::init(const char *title, int x, int y, int width, int height, bool fu
     } else {
         running = false;
     }
-    jugador = new ObjetoDeJuego("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/gameWindowWavesButton.png", 60, 60, ID::Arquero);
     map = new Board();
+
+    //Entity Component System implementation
+
+    jugador.addComponent<TransformComponent>();
+    jugador.addComponent<SpriteComponent>("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowButton.png");
+
 }
 
 void Juego::handleEventos() {
@@ -60,14 +64,21 @@ void Juego::handleEventos() {
 }
 
 void Juego::actualizar() {
-    jugador->actualizar();
+    manager.refresh();
+    manager.actualizar();
+    jugador.getComponent<TransformComponent>().position.Add(Vector(5,0));
+
+    if(jugador.getComponent<TransformComponent>().position.x > 100){
+        jugador.getComponent<SpriteComponent>().setTexture("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowBackground.png");
+    }
+
 }
 
 void Juego::render() {
     SDL_RenderClear(renderer);
     //Aqui agregamos cosas para renderizar
     map->DrawBoard();
-    jugador->Render();
+    manager.draw();
     SDL_RenderPresent(renderer);
 }
 

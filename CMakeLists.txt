@@ -11,8 +11,11 @@ add_executable(CE-vs-Zombies-Estudiantes main.cpp ObjetosDeJuego/ObjetoDeJuego.c
         GUI/Window.cpp GUI/Window.h GUI/gameWindow.cpp GUI/gameWindow.h ProcesamientoDeJuego/Juego.cpp ProcesamientoDeJuego/Juego.h
         ProcesamientoDeJuego/TextureManager.cpp ProcesamientoDeJuego/TextureManager.h
         ProcesamientoDeJuego/Board.cpp ProcesamientoDeJuego/Board.h
-        ObjetosDeJuego/EntityComponentSystem.cpp ObjetosDeJuego/EntityComponentSystem.h
-        ObjetosDeJuego/Components.h)
+        ObjetosDeJuego/ECS/EntityComponentSystem.h
+        ObjetosDeJuego/ECS/Components.h
+        ObjetosDeJuego/ECS/TransformComponent.h
+        ObjetosDeJuego/ECS/SpriteComponent.h
+        ProcesamientoDeJuego/Vector.h ProcesamientoDeJuego/Vector.cpp)
 
 INCLUDE(FindPkgConfig)
 

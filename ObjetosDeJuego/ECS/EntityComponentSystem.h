@@ -52,10 +52,11 @@ private:
 public:
     void actualizar(){
         for (auto& c: components) c->actualizar();
-        for (auto& c: components) c->draw();
     }
 
-    void draw(){};
+    void draw(){
+        for (auto& c: components) c->draw();
+    };
     bool isActive() const {return activate; };
     void destroy() {activate = false; };
 
