@@ -11,6 +11,16 @@ Board::Board() {
     srcRec.y = destRect.y = 22;
     srcRec.w = destRect.w = 610;
     srcRec.h = destRect.h = 610;
+
+    srcBGRec.x = destBGRect.x = 0;
+    srcBGRec.y = destBGRect.y = 0;
+    srcBGRec.w = destBGRect.w = 897;
+    srcBGRec.h = destBGRect.h = 650;
+}
+
+Board::~Board() {
+    SDL_DestroyTexture(mainBackground);
+    SDL_DestroyTexture(boardBackground);
 }
 
 void Board::LoadBoard(int arr[10][10]) {
@@ -30,6 +40,11 @@ void Board::DrawBoard() {
 //        }
 //    }
 
+    TextureManager::Draw(mainBackground, srcBGRec, destBGRect);
     TextureManager::Draw(boardBackground, srcRec, destRect);
+
+}
+
+void Board::chooseCell(int arr[10][10]) {
 
 }

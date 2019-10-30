@@ -7,6 +7,8 @@
 #include "Components.h"
 
 class KeyBoardController : public Component{
+private:
+    int clicked = 0;
 public:
     TransformComponent *transform;
 
@@ -15,6 +17,20 @@ public:
     }
 
     void actualizar() override {
+        if(clicked == 1 && Juego::event.type == SDL_MOUSEBUTTONDOWN){
+            this->clicked = 0;
+
+            int mouseXPosOnBoard = Juego::event.button.x - 13;
+            int mouseYPosOnBoard = Juego::event.button.y - 22;
+            int boardSideLong = 610;
+            int cellLong = 610/10;
+
+            int mouseCellXPos = (mouseXPosOnBoard / cellLong);
+            int mouseCellYPos = (mouseYPosOnBoard / cellLong);
+
+            transform->position.x = (mouseCellXPos * cellLong);
+            transform->position.y = (mouseCellYPos * cellLong);
+        }
         if(Juego::event.type == SDL_KEYDOWN){
             switch (Juego::event.key.keysym.sym){
                 case SDLK_w:
@@ -55,28 +71,13 @@ public:
             }
         }
 
-//        if((Juego::event.type == SDL_MOUSEBUTTONUP) &&
-//        (Juego::event.button.x > this->transform->position.x) &&
-//        (Juego::event.button.x < this->transform->position.x + 64)){
-//            switch (Juego::event.button.button){
-//                case SDL_BUTTON_LEFT:
-//                    transform->position.x = Juego::event.button.x;
-//                    transform->position.y = Juego::event.button.y;
-//                    break;
-//                case SDL_BUTTON_RIGHT:
-//                    transform->velocity.x = -3;
-//                    break;
-//
-//                default:
-//                    break;
-//            }
+        if((Juego::event.type == SDL_MOUSEBUTTONDOWN) &&
+        (Juego::event.button.x > this->transform->position.x) &&
+        (Juego::event.button.x < this->transform->position.x + 61) &&
+        (Juego::event.button.y > this->transform->position.y) &&
+        (Juego::event.button.y < this->transform->position.y + 61)) {
+            clicked = 1;
 
-        if(Juego::event.type == SDL_MOUSEMOTION){
-            if ((Juego::event.button.x > this->transform->position.x) &&
-            (Juego::event.button.x < this->transform->position.x + 64)){
-                transform->position.x = Juego::event.button.x;
-                transform->position.y = Juego::event.button.y;
-            }
         }
     }
 };

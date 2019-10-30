@@ -37,10 +37,10 @@ void Window::handleButton(){
         juego->actualizar();
         juego->render();
 
-        frameTime = SDL_GetTicks() - frameStart;
-        if(delay > frameTime){
-            SDL_Delay(delay - frameTime);
-        }
+//        frameTime = SDL_GetTicks() - frameStart;
+//        if(delay > frameTime){
+//            SDL_Delay(delay - frameTime);
+//        }
     }
     juego->clean();
 
