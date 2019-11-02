@@ -1,12 +1,8 @@
 
 #include "ID.h"
 #include "ObjetoDeJuego.h"
-
-ObjetoDeJuego::ObjetoDeJuego(int x, int y, ID id){
-    this->x = x;
-    this->y = y;
-    this->id = id;
-}
+#include "../ProcesamientoDeJuego/TextureManager.h"
+#include "../ProcesamientoDeJuego/Juego.h"
 
 int ObjetoDeJuego::getX() const {
     return x;
@@ -54,5 +50,32 @@ int ObjetoDeJuego::getSalud() const {
 
 void ObjetoDeJuego::setSalud(int salud) {
     ObjetoDeJuego::salud = salud;
+}
+
+ObjetoDeJuego::ObjetoDeJuego(const char *texturesheet, int x, int y, ID id) {
+    this->texture = TextureManager::LoadTexture(texturesheet);
+    this->x = x;
+    this->y = y;
+    this->id = id;
+}
+
+void ObjetoDeJuego::actualizar() {
+    srcRect.y = 0;
+    srcRect.x = 0;
+    srcRect.h = 60;
+    srcRect.w = 120;
+
+    x++;+y++;
+
+    destRect.w = 120;
+    destRect.h = 60;
+    destRect.x= x;
+    destRect.y = y;
+
+}
+
+void ObjetoDeJuego::Render() {
+    SDL_RenderCopy(Juego::renderer, texture, &srcRect, &destRect);
+
 }
 

@@ -7,6 +7,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ObjetosDeJuego/ID.cpp.o"
   "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/GUI/Window.cpp.o"
   "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/GUI/gameWindow.cpp.o"
+  "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Juego.cpp.o"
+  "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/TextureManager.cpp.o"
+  "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Board.cpp.o"
+  "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Vector.cpp.o"
+  "CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Collision.cpp.o"
   "CE-vs-Zombies-Estudiantes.pdb"
   "CE-vs-Zombies-Estudiantes"
 )

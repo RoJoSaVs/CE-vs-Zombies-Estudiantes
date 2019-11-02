@@ -1,7 +1,7 @@
 #include <QtGui>
 #include <QtWidgets/QApplication>
 #include "GUI/Window.h"
-
+#include "ProcesamientoDeJuego/Juego.h"
 
 int main(int argc, char *argv[]){
 
@@ -10,5 +10,6 @@ int main(int argc, char *argv[]){
     mainWindow.setFixedSize(897, 650);
     mainWindow.setStyleSheet("background-image: url(/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/mainWindowBackground.png)");
     mainWindow.show();
+
     return app.exec();
 }

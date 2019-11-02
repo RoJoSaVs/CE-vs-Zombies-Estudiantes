@@ -271,6 +271,141 @@ ObjetosDeJuego/ObjetoDeJuego.cpp.s:
 	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ObjetosDeJuego/ObjetoDeJuego.cpp.s
 .PHONY : ObjetosDeJuego/ObjetoDeJuego.cpp.s
 
+ProcesamientoDeJuego/Board.o: ProcesamientoDeJuego/Board.cpp.o
+
+.PHONY : ProcesamientoDeJuego/Board.o
+
+# target to build an object file
+ProcesamientoDeJuego/Board.cpp.o:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Board.cpp.o
+.PHONY : ProcesamientoDeJuego/Board.cpp.o
+
+ProcesamientoDeJuego/Board.i: ProcesamientoDeJuego/Board.cpp.i
+
+.PHONY : ProcesamientoDeJuego/Board.i
+
+# target to preprocess a source file
+ProcesamientoDeJuego/Board.cpp.i:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Board.cpp.i
+.PHONY : ProcesamientoDeJuego/Board.cpp.i
+
+ProcesamientoDeJuego/Board.s: ProcesamientoDeJuego/Board.cpp.s
+
+.PHONY : ProcesamientoDeJuego/Board.s
+
+# target to generate assembly for a file
+ProcesamientoDeJuego/Board.cpp.s:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Board.cpp.s
+.PHONY : ProcesamientoDeJuego/Board.cpp.s
+
+ProcesamientoDeJuego/Collision.o: ProcesamientoDeJuego/Collision.cpp.o
+
+.PHONY : ProcesamientoDeJuego/Collision.o
+
+# target to build an object file
+ProcesamientoDeJuego/Collision.cpp.o:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Collision.cpp.o
+.PHONY : ProcesamientoDeJuego/Collision.cpp.o
+
+ProcesamientoDeJuego/Collision.i: ProcesamientoDeJuego/Collision.cpp.i
+
+.PHONY : ProcesamientoDeJuego/Collision.i
+
+# target to preprocess a source file
+ProcesamientoDeJuego/Collision.cpp.i:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Collision.cpp.i
+.PHONY : ProcesamientoDeJuego/Collision.cpp.i
+
+ProcesamientoDeJuego/Collision.s: ProcesamientoDeJuego/Collision.cpp.s
+
+.PHONY : ProcesamientoDeJuego/Collision.s
+
+# target to generate assembly for a file
+ProcesamientoDeJuego/Collision.cpp.s:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Collision.cpp.s
+.PHONY : ProcesamientoDeJuego/Collision.cpp.s
+
+ProcesamientoDeJuego/Juego.o: ProcesamientoDeJuego/Juego.cpp.o
+
+.PHONY : ProcesamientoDeJuego/Juego.o
+
+# target to build an object file
+ProcesamientoDeJuego/Juego.cpp.o:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Juego.cpp.o
+.PHONY : ProcesamientoDeJuego/Juego.cpp.o
+
+ProcesamientoDeJuego/Juego.i: ProcesamientoDeJuego/Juego.cpp.i
+
+.PHONY : ProcesamientoDeJuego/Juego.i
+
+# target to preprocess a source file
+ProcesamientoDeJuego/Juego.cpp.i:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Juego.cpp.i
+.PHONY : ProcesamientoDeJuego/Juego.cpp.i
+
+ProcesamientoDeJuego/Juego.s: ProcesamientoDeJuego/Juego.cpp.s
+
+.PHONY : ProcesamientoDeJuego/Juego.s
+
+# target to generate assembly for a file
+ProcesamientoDeJuego/Juego.cpp.s:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Juego.cpp.s
+.PHONY : ProcesamientoDeJuego/Juego.cpp.s
+
+ProcesamientoDeJuego/TextureManager.o: ProcesamientoDeJuego/TextureManager.cpp.o
+
+.PHONY : ProcesamientoDeJuego/TextureManager.o
+
+# target to build an object file
+ProcesamientoDeJuego/TextureManager.cpp.o:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/TextureManager.cpp.o
+.PHONY : ProcesamientoDeJuego/TextureManager.cpp.o
+
+ProcesamientoDeJuego/TextureManager.i: ProcesamientoDeJuego/TextureManager.cpp.i
+
+.PHONY : ProcesamientoDeJuego/TextureManager.i
+
+# target to preprocess a source file
+ProcesamientoDeJuego/TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/TextureManager.cpp.i
+.PHONY : ProcesamientoDeJuego/TextureManager.cpp.i
+
+ProcesamientoDeJuego/TextureManager.s: ProcesamientoDeJuego/TextureManager.cpp.s
+
+.PHONY : ProcesamientoDeJuego/TextureManager.s
+
+# target to generate assembly for a file
+ProcesamientoDeJuego/TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/TextureManager.cpp.s
+.PHONY : ProcesamientoDeJuego/TextureManager.cpp.s
+
+ProcesamientoDeJuego/Vector.o: ProcesamientoDeJuego/Vector.cpp.o
+
+.PHONY : ProcesamientoDeJuego/Vector.o
+
+# target to build an object file
+ProcesamientoDeJuego/Vector.cpp.o:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Vector.cpp.o
+.PHONY : ProcesamientoDeJuego/Vector.cpp.o
+
+ProcesamientoDeJuego/Vector.i: ProcesamientoDeJuego/Vector.cpp.i
+
+.PHONY : ProcesamientoDeJuego/Vector.i
+
+# target to preprocess a source file
+ProcesamientoDeJuego/Vector.cpp.i:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Vector.cpp.i
+.PHONY : ProcesamientoDeJuego/Vector.cpp.i
+
+ProcesamientoDeJuego/Vector.s: ProcesamientoDeJuego/Vector.cpp.s
+
+.PHONY : ProcesamientoDeJuego/Vector.s
+
+# target to generate assembly for a file
+ProcesamientoDeJuego/Vector.cpp.s:
+	$(MAKE) -f CMakeFiles/CE-vs-Zombies-Estudiantes.dir/build.make CMakeFiles/CE-vs-Zombies-Estudiantes.dir/ProcesamientoDeJuego/Vector.cpp.s
+.PHONY : ProcesamientoDeJuego/Vector.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -323,6 +458,21 @@ help:
 	@echo "... ObjetosDeJuego/ObjetoDeJuego.o"
 	@echo "... ObjetosDeJuego/ObjetoDeJuego.i"
 	@echo "... ObjetosDeJuego/ObjetoDeJuego.s"
+	@echo "... ProcesamientoDeJuego/Board.o"
+	@echo "... ProcesamientoDeJuego/Board.i"
+	@echo "... ProcesamientoDeJuego/Board.s"
+	@echo "... ProcesamientoDeJuego/Collision.o"
+	@echo "... ProcesamientoDeJuego/Collision.i"
+	@echo "... ProcesamientoDeJuego/Collision.s"
+	@echo "... ProcesamientoDeJuego/Juego.o"
+	@echo "... ProcesamientoDeJuego/Juego.i"
+	@echo "... ProcesamientoDeJuego/Juego.s"
+	@echo "... ProcesamientoDeJuego/TextureManager.o"
+	@echo "... ProcesamientoDeJuego/TextureManager.i"
+	@echo "... ProcesamientoDeJuego/TextureManager.s"
+	@echo "... ProcesamientoDeJuego/Vector.o"
+	@echo "... ProcesamientoDeJuego/Vector.i"
+	@echo "... ProcesamientoDeJuego/Vector.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

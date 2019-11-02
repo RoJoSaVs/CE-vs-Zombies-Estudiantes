@@ -6,6 +6,7 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include "gameWindow.h"
+#include "../ProcesamientoDeJuego/Juego.h"
 
 using namespace std;
 
@@ -23,6 +24,7 @@ private slots:
     void handleButton();
 
 public:
+    Juego *juego;
     explicit Window(QWidget *parent = 0);
 };
 
