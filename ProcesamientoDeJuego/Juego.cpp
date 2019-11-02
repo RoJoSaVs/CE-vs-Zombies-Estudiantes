@@ -12,10 +12,14 @@
 SDL_Renderer* Juego::renderer = nullptr;
 SDL_Event Juego::event;
 
-Board* map;
+Board *Juego::getMap()  {
+    return map;
+}
+
 Manager manager;
 auto& jugador(manager.addEntity());
 auto& wall(manager.addEntity());
+auto& lanzallamas(manager.addEntity());
 
 
 Juego::Juego() {
@@ -44,17 +48,28 @@ void Juego::init(const char *title, int x, int y, int width, int height, bool fu
     } else {
         running = false;
     }
-
     map = new Board();
 
     //Entity Component System implementation
 
-    jugador.addComponent<TransformComponent>(2);
+    int scale = 2;
+    jugador.addComponent<TransformComponent>(scale);
     jugador.addComponent<SpriteComponent>("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/geneticElfo.png");
     jugador.addComponent<KeyBoardController>();
     jugador.addComponent<ColliderComponent>("player");
 
-    wall.addComponent<TransformComponent>(300.0f, 300.0f, 300, 20, 1);
+    float xEpos = 650.0f, yEpos = 375.0f;
+    int wE = 60, hE = 60;
+    int scaleE2 = 1;
+    lanzallamas.addComponent<TransformComponent>(xEpos, yEpos, wE, hE, scaleE2);
+    lanzallamas.addComponent<SpriteComponent>("/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/lanzallamas.png");
+    lanzallamas.addComponent<KeyBoardController>();
+    lanzallamas.addComponent<ColliderComponent>("enemy");
+
+    float xpos = 300.0f, ypos = 300.0f;
+    int w = 300, h = 20;
+    int scale2 = 1;
+    wall.addComponent<TransformComponent>(xpos, ypos, w, h, scale2);
     wall.addComponent<SpriteComponent>();
     wall.addComponent<ColliderComponent>("wall");
 
@@ -74,7 +89,8 @@ void Juego::handleEventos() {
 
 void Juego::actualizar() {
     manager.refresh();
-    manager.actualizar();
+    manager.actualizar(map);
+
 
     if(Collision::AABB(jugador.getComponent<ColliderComponent>().collider,
             wall.getComponent<ColliderComponent>().collider)){

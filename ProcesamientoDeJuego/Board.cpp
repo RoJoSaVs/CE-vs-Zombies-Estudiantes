@@ -16,6 +16,7 @@ Board::Board() {
     srcBGRec.y = destBGRect.y = 0;
     srcBGRec.w = destBGRect.w = 897;
     srcBGRec.h = destBGRect.h = 650;
+
 }
 
 Board::~Board() {
@@ -48,3 +49,12 @@ void Board::DrawBoard() {
 void Board::chooseCell(int arr[10][10]) {
 
 }
+
+void Board::setFullCell(int row, int column) {
+    board[row][column] = 0;
+}
+
+void Board::setEmptyCell(int row, int column) {
+    this->board[row][column] = 1;
+}
+

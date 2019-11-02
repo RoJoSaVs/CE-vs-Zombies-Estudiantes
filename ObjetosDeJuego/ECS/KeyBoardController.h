@@ -9,19 +9,21 @@
 class KeyBoardController : public Component{
 private:
     int clicked = 0;
+    int row, column;
 public:
     TransformComponent *transform;
+    Board *map;
 
     void init() override {
         transform = &entity->getComponent<TransformComponent>();
     }
 
-    void actualizar() override {
+    void actualizar(Board *arr) override {
         if(clicked == 1 && Juego::event.type == SDL_MOUSEBUTTONDOWN){
             this->clicked = 0;
 
-            int mouseXPosOnBoard = Juego::event.button.x - 13;
-            int mouseYPosOnBoard = Juego::event.button.y - 22;
+            int mouseXPosOnBoard = Juego::event.button.x ;//- 13;
+            int mouseYPosOnBoard = Juego::event.button.y ;//- 22;
             int boardSideLong = 610;
             int cellLong = 610/10;
 
@@ -30,6 +32,9 @@ public:
 
             transform->position.x = (mouseCellXPos * cellLong);
             transform->position.y = (mouseCellYPos * cellLong);
+
+            arr->setFullCell(mouseCellXPos, mouseCellYPos);
+
         }
         if(Juego::event.type == SDL_KEYDOWN){
             switch (Juego::event.key.keysym.sym){
@@ -79,6 +84,10 @@ public:
             clicked = 1;
 
         }
+    }
+
+    int values()override {
+        return ((row*100) + column);
     }
 };
 

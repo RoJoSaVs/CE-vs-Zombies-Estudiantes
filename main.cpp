@@ -1,9 +1,9 @@
 #include <QtGui>
 #include <QtWidgets/QApplication>
 #include "GUI/Window.h"
+#include "ProcesamientoDeJuego/Juego.h"
 
 int main(int argc, char *argv[]){
-
 
     QApplication app(argc, argv);
     Window mainWindow;

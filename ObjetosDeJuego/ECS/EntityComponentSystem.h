@@ -9,6 +9,8 @@
 #include <memory>
 #include <bitset>
 #include <array>
+#include "../../ProcesamientoDeJuego/Board.h"
+
 
 class Component;
 class Entity;
@@ -30,12 +32,15 @@ constexpr std::size_t maxComponents = 32;
 using ComponentBitset = std::bitset<maxComponents>;
 using ComponentArray = std::array<Component*, maxComponents>;
 
+class Board;
+
 class Component{
 public:
     Entity* entity;
 
     virtual void init(){};
-    virtual void actualizar(){};
+    virtual void actualizar(Board *board){};
+    virtual int values(){};
     virtual void draw(){};
 
     virtual ~Component(){};
@@ -50,8 +55,12 @@ private:
     ComponentBitset componentBitset;
 
 public:
-    void actualizar(){
-        for (auto& c: components) c->actualizar();
+    void actualizar(Board *arr){
+        for (auto& c: components) c->actualizar(arr);
+    }
+
+    int values(){
+        for (auto& c: components) c->values();
     }
 
     void draw(){
@@ -60,7 +69,7 @@ public:
     bool isActive() const {return activate; };
     void destroy() {activate = false; };
 
-    template <typename T> bool hasComponent() const { return componentBitset[getComponentTypeID<T>]; };
+    template <typename T> bool hasComponent() const { return componentBitset[getComponentTypeID<T>()]; };
 
     template <typename T, typename... TArgs>
     T& addComponent(TArgs&... mArgs){
@@ -87,8 +96,8 @@ private:
     std::vector<std::unique_ptr<Entity>> entities;
 
 public:
-    void actualizar(){
-        for (auto& e : entities) e->actualizar();
+    void actualizar(Board *arr){
+        for (auto& e : entities) e->actualizar(arr);
     }
 
     void draw(){

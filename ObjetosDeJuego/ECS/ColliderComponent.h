@@ -7,7 +7,7 @@
 #include "SDL.h"
 #include "Components.h"
 
-class ColliderComponent : Component {
+class ColliderComponent : public Component {
 public:
     SDL_Rect collider;
     std::string tag;
@@ -24,7 +24,7 @@ public:
         transform = &entity->getComponent<TransformComponent>();
     }
 
-    void actualizar() override {
+    void actualizar(Board *arr) override {
          collider.x = static_cast<int>(transform->position.x);
          collider.y = static_cast<int> (transform->position.y);
          collider.w = transform->width * transform->scale;

@@ -2,6 +2,7 @@
 #define CE_VS_ZOMBIES_ESTUDIANTES_JUEGO_H
 
 #include "SDL2/SDL.h"
+#include "Board.h"
 #include <stdio.h>
 #include <QtWidgets/QPushButton>
 
@@ -19,10 +20,16 @@ public:
     void render();
     void clean();
 
-    bool isRunning(){return running;};
+    bool isRunning(){return running;}
+
+    Board* map;
+
+
+    Board *getMap() ;
 
     static SDL_Renderer *renderer;
     static SDL_Event event;
+
 
 private:
     int count = 0;

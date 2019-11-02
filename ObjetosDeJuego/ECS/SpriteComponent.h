@@ -36,7 +36,7 @@ public:
         srcRect.h = transform->height;
     }
 
-    void actualizar() override {
+    void actualizar(Board *arr) override {
         destRect.x = (int)transform->position.x;
         destRect.y = (int)transform->position.y;
         destRect.w = transform->width * transform->scale;

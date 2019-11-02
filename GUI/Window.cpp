@@ -26,7 +26,6 @@ void Window::handleButton(){
     int frameTime;
 
     this->hide();
-    Juego *juego;
     juego = new Juego();
     juego->init("CEvsZombies", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 897, 650, false);
     while (juego->isRunning()){

@@ -17,7 +17,8 @@ add_executable(CE-vs-Zombies-Estudiantes main.cpp ObjetosDeJuego/ObjetoDeJuego.c
         ObjetosDeJuego/ECS/SpriteComponent.h
         ProcesamientoDeJuego/Vector.h ProcesamientoDeJuego/Vector.cpp
         ObjetosDeJuego/ECS/ColliderComponent.h
-        ProcesamientoDeJuego/Collision.h ProcesamientoDeJuego/Collision.cpp)
+        ProcesamientoDeJuego/Collision.h ProcesamientoDeJuego/Collision.cpp
+        )
 
 INCLUDE(FindPkgConfig)
 
