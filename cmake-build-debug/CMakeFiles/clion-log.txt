@@ -1,4 +1,4 @@
-/home/tomas/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes
+/home/tomas/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/home/tomas/Qt/5.13.0/gcc_64/lib/cmake -G "CodeBlocks - Unix Makefiles" /home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes
 -- The C compiler identification is GNU 7.4.0
 -- The CXX compiler identification is GNU 7.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -14,20 +14,6 @@
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
-CMake Error at /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake:28 (find_package):
-  Could not find a package configuration file provided by "Qt5Multimedia"
-  with any of the following names:
-
-    Qt5MultimediaConfig.cmake
-    qt5multimedia-config.cmake
-
-  Add the installation prefix of "Qt5Multimedia" to CMAKE_PREFIX_PATH or set
-  "Qt5Multimedia_DIR" to a directory containing one of the above files.  If
-  "Qt5Multimedia" provides a separate development package or SDK, be sure it
-  has been installed.
-Call Stack (most recent call first):
-  CMakeLists.txt:12 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug
