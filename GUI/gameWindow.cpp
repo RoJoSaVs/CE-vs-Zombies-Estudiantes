@@ -5,7 +5,7 @@ gameWindow::gameWindow(QWidget *parent) {
     connect(wavesButton, SIGNAL (released()), this, SLOT (handleButton()));
     wavesButton->setGeometry(647, 577, 227,46);
     wavesButton->setFlat(true);
-    wavesButton->setStyleSheet("background-image: url(/home/tomas/CLionProjects/CE-vs-Zombies-Estudiantes/Media/gameWindowWavesButton.png)");
+    wavesButton->setStyleSheet("background-image: url(/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/Media/gameWindowWavesButton.png)");
 
 }
 

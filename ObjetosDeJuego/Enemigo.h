@@ -1,17 +1,19 @@
-#ifndef CE_VS_ZOMBIES_ESTUDIANTES_OBJETODEJUEGO_H
-#define CE_VS_ZOMBIES_ESTUDIANTES_OBJETODEJUEGO_H
+#ifndef CE_VS_ZOMBIES_ESTUDIANTES_ENEMIGO_H
+#define CE_VS_ZOMBIES_ESTUDIANTES_ENEMIGO_H
 
 #include "ID.h"
-class ObjetoDeJuego {
 
-protected:
+class Enemigo {
+private:
     int x, y;
     ID id;
     int velX, velY;
     int salud;
-
+    Enemigo* next = nullptr;
 public:
-    ObjetoDeJuego(int x, int y, ID id);
+
+
+    Enemigo(int x, int y, ID id);
 
     int getX() const;
 
@@ -37,9 +39,10 @@ public:
 
     void setSalud(int salud);
 
+    Enemigo* get_next();
+
+    void set_next(Enemigo* current);
 };
 
-class Tower: public ObjetoDeJuego{
 
-};
-#endif //CE_VS_ZOMBIES_ESTUDIANTES_OBJETODEJUEGO_H
+#endif //CE_VS_ZOMBIES_ESTUDIANTES_ENEMIGO_H

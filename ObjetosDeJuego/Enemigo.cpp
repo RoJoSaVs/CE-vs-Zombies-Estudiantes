@@ -1,9 +1,6 @@
+#include "Enemigo.h"
 
-#include "ID.h"
-#include "ObjetoDeJuego.h"
-
-
-ObjetoDeJuego::ObjetoDeJuego(int x, int y, ID id){
+Enemigo::Enemigo(int x, int y, ID id){
     this->x = x;
     this->y = y;
     this->id = id;
@@ -32,53 +29,58 @@ ObjetoDeJuego::ObjetoDeJuego(int x, int y, ID id){
     }
 }
 
-int ObjetoDeJuego::getX() const {
+int Enemigo::getX() const {
     return x;
 }
 
-void ObjetoDeJuego::setX(int x) {
-    ObjetoDeJuego::x = x;
+void Enemigo::setX(int x) {
+    Enemigo::x = x;
 }
 
-int ObjetoDeJuego::getY() const {
+int Enemigo::getY() const {
     return y;
 }
 
-void ObjetoDeJuego::setY(int y) {
-    ObjetoDeJuego::y = y;
+void Enemigo::setY(int y) {
+    Enemigo::y = y;
 }
 
-const ID &ObjetoDeJuego::getId() const {
+const ID &Enemigo::getId() const {
     return id;
 }
 
-void ObjetoDeJuego::setId(const ID &id) {
-    ObjetoDeJuego::id = id;
+void Enemigo::setId(const ID &id) {
+    Enemigo::id = id;
 }
 
-int ObjetoDeJuego::getVelX() const {
+int Enemigo::getVelX() const {
     return velX;
 }
 
-void ObjetoDeJuego::setVelX(int velX) {
-    ObjetoDeJuego::velX = velX;
+void Enemigo::setVelX(int velX) {
+    Enemigo::velX = velX;
 }
 
-int ObjetoDeJuego::getVelY() const {
+int Enemigo::getVelY() const {
     return velY;
 }
 
-void ObjetoDeJuego::setVelY(int velY) {
-    ObjetoDeJuego::velY = velY;
+void Enemigo::setVelY(int velY) {
+    Enemigo::velY = velY;
 }
 
-int ObjetoDeJuego::getSalud() const {
+int Enemigo::getSalud() const {
     return salud;
 }
 
-void ObjetoDeJuego::setSalud(int salud) {
-    ObjetoDeJuego::salud = salud;
+void Enemigo::setSalud(int salud) {
+    Enemigo::salud = salud;
 }
 
+void Enemigo::set_next(Enemigo* current) {
+    this->next = current;
+}
 
-
+Enemigo* Enemigo::get_next(){
+    return this->next;
+}

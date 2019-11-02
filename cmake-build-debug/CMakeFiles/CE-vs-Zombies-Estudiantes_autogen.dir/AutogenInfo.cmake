@@ -1,0 +1,35 @@
+# Meta
+set(AM_MULTI_CONFIG "FALSE")
+set(AM_PARALLEL "7")
+set(AM_VERBOSITY "")
+# Directories
+set(AM_CMAKE_SOURCE_DIR "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes")
+set(AM_CMAKE_BINARY_DIR "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug")
+set(AM_CMAKE_CURRENT_SOURCE_DIR "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes")
+set(AM_CMAKE_CURRENT_BINARY_DIR "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug")
+set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
+set(AM_BUILD_DIR "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug/CE-vs-Zombies-Estudiantes_autogen")
+set(AM_INCLUDE_DIR "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug/CE-vs-Zombies-Estudiantes_autogen/include")
+# Files
+set(AM_SOURCES "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/Algoritmos/Algoritmo_aStar.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/Algoritmos/Backtracking.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/Algoritmos/Genetico.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/GUI/Window.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/GUI/gameWindow.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/Enemigo.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/ID.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/ListObjetosJuego.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/ObjetoDeJuego.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ProcesamientoDeJuego/Juego.cpp;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/main.cpp")
+set(AM_HEADERS "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/Algoritmos/Algoritmo_aStar.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/GUI/Window.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/GUI/gameWindow.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/Enemigo.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/ID.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/ListObjetosJuego.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ObjetosDeJuego/ObjetoDeJuego.h;/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/ProcesamientoDeJuego/Juego.h")
+set(AM_SETTINGS_FILE "/home/ronny/CLionProjects/CE-vs-Zombies-Estudiantes/cmake-build-debug/CMakeFiles/CE-vs-Zombies-Estudiantes_autogen.dir/AutogenOldSettings.txt")
+# Qt
+set(AM_QT_VERSION_MAJOR 5)
+set(AM_QT_MOC_EXECUTABLE "/usr/lib/qt5/bin/moc")
+set(AM_QT_UIC_EXECUTABLE "/usr/lib/qt5/bin/uic")
+# MOC settings
+set(AM_MOC_SKIP "")
+set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB")
+set(AM_MOC_INCLUDES "/usr/include/x86_64-linux-gnu/qt5;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include;/usr/include/c++/7;/usr/include/x86_64-linux-gnu/c++/7;/usr/include/c++/7/backward;/usr/lib/gcc/x86_64-linux-gnu/7/include;/usr/local/include;/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed;/usr/include/x86_64-linux-gnu")
+set(AM_MOC_OPTIONS "")
+set(AM_MOC_RELAXED_MODE "")
+set(AM_MOC_MACRO_NAMES "Q_OBJECT;Q_GADGET;Q_NAMESPACE")
+set(AM_MOC_DEPEND_FILTERS "")
+set(AM_MOC_PREDEFS_CMD "/usr/bin/c++;-dM;-E;-c;/opt/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp")
+# UIC settings
+set(AM_UIC_SKIP "")
+set(AM_UIC_TARGET_OPTIONS "")
+set(AM_UIC_OPTIONS_FILES "")
+set(AM_UIC_OPTIONS_OPTIONS "")
+set(AM_UIC_SEARCH_PATHS "")
